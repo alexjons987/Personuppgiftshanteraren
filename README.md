@@ -51,23 +51,23 @@ Här är en utvecklad version som introducerar metoder på ett naturligt sätt:
 I denna övning ska du skapa ett program som hanterar personuppgifter och använder
 metoder för att göra olika beräkningar och kontroller. Programmet ska fortfarande köras från
 main-metoden men använda andra metoder för specifika uppgifter.
-## 1. Börja med samma variabler som tidigare: ❌
+## 1. Börja med samma variabler som tidigare: ✅
 - Förnamn och efternamn (separata String-variabler)
 - Ålder (int)
 - Längd i meter (double)
 - Vikt i kg (double)
 - Student (boolean)
 ## 2. Skapa följande metoder: ❌
-- En metod som tar förnamn och efternamn som parametrar och returnerar fullständigt namn
-- En metod som tar ålder som parameter och returnerar om personen är myndig (boolean)
-- En metod som beräknar BMI (använd vikt och längd som parametrar)
-- En metod som tar längd som parameter och returnerar längd i både meter och centimeter som en String
-- En metod som skriver ut all information om personen snyggt formaterat
+- En metod som tar förnamn och efternamn som parametrar och returnerar fullständigt namn ✅
+- En metod som tar ålder som parameter och returnerar om personen är myndig (boolean) ✅
+- En metod som beräknar BMI (använd vikt och längd som parametrar) ✅
+- En metod som tar längd som parameter och returnerar längd i både meter och centimeter som en String ✅
+- En metod som skriver ut all information om personen snyggt formaterat ❌
 ## 3. I main-metoden: ❌
-- Skapa alla variabler och ge dem värden
-- Anropa dina metoder med dessa variabler
-- Spara resultaten i nya variabler när metoderna returnerar värden
-- Skriv ut resultaten
+- Skapa alla variabler och ge dem värden ✅
+- Anropa dina metoder med dessa variabler ❌
+- Spara resultaten i nya variabler när metoderna returnerar värden ❌
+- Skriv ut resultaten ❌
 ---
 Saker att experimentera med:
 - Prova både metoder som returnerar värden och void-metoder

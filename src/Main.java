@@ -30,4 +30,31 @@ public class Main {
         System.out.printf("In 5 years I will be %d years old\n", (age + 5));
         System.out.println("My height in centimeter is " + heightM * 100);
     }
+
+    public static String getFullName(String firstName, String lastName) {
+        return firstName + " " + lastName;
+    }
+
+    public static boolean isAdult(byte age) {
+        return age >= 18;
+    }
+
+    public static float calculateBMI(float weightKg, float heightMeters) {
+        return weightKg / (float) (Math.pow(heightMeters, 2));
+    }
+
+    public static String getLengthString(float heightInMeters) {
+        return "Height: " + heightInMeters + "m (" + (heightInMeters * 100) + "cm)";
+    }
+
+    public static void prettyPrintPerson(
+            String firstName,
+            String lastName,
+            byte age,
+            float heightInMeters,
+            float weightKg,
+            boolean isStudent
+    ) {
+        // Code
+    }
 }
