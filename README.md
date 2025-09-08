@@ -1,4 +1,4 @@
-# A) Personuppgiftshanteraren ❌
+# A) Personuppgiftshanteraren ✅
 Här är en grundläggande övning som hjälper dig förstå hur man tänker och arbetar i Java:
 
 I denna övning ska du skapa ett enkelt program som hanterar information om en person.
@@ -18,11 +18,11 @@ Steg för steg:
 - Använd System.out.println för varje utskrift
 - Testa både att skriva ut variabler direkt och att kombinera text med variabler
 - Experimentera med olika sätt att formatera utskrifterna
-## 4. Gör några enkla beräkningar: ❌
+## 4. Gör några enkla beräkningar: ✅
 - Räkna ut personens ålder om 5 år
 - Konvertera längden till centimeter
 - Experimentera med att kombinera olika datatyper i beräkningarna
-
+---
 Saker att testa och reflektera över:
 - Vad händer om du försöker spara ett decimaltal i en heltalsvariabel?
 - Vad händer om du försöker använda ett variabelnamn som börjar med en siffra?
@@ -68,7 +68,7 @@ main-metoden men använda andra metoder för specifika uppgifter.
 - Anropa dina metoder med dessa variabler
 - Spara resultaten i nya variabler när metoderna returnerar värden
 - Skriv ut resultaten
-
+---
 Saker att experimentera med:
 - Prova både metoder som returnerar värden och void-metoder
 - Testa vad som händer om du skickar fel datatyp som parameter
@@ -147,7 +147,7 @@ Bygger vidare på tidigare övning men lägger till logik för att hantera olika
   * Kontrollera både ålder och student-status
   * Använd `&&`, `||` och nästlade if-satser
   * Returnera olika rabattnivåer baserat på kriterierna
-
+---
 ### Detta lär dig
  * `if`, `else if`, `else`
  * switch-satser
