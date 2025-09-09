@@ -29,6 +29,15 @@ public class Main {
 
         System.out.printf("In 5 years I will be %d years old\n", (age + 5));
         System.out.println("My height in centimeter is " + heightM * 100);
+
+        String fullName = getFullName(firstName, lastName);
+        boolean isAdult = isAdult(age);
+        float bmi = calculateBMI(weightKg, heightM);
+        String heightString = getHeightString(heightM);
+
+        System.out.println(); // Newline for better demonstration in console output
+
+        prettyPrintPerson(firstName, lastName, age, heightM, weightKg, isStudent, isAdult, bmi);
     }
 
     public static String getFullName(String firstName, String lastName) {
@@ -36,14 +45,18 @@ public class Main {
     }
 
     public static boolean isAdult(byte age) {
+        if (age < 0)
+            throw new RuntimeException();
         return age >= 18;
     }
 
     public static float calculateBMI(float weightKg, float heightMeters) {
+        if (heightMeters == 0)
+            throw new RuntimeException();
         return weightKg / (float) (Math.pow(heightMeters, 2));
     }
 
-    public static String getLengthString(float heightInMeters) {
+    public static String getHeightString(float heightInMeters) {
         return "Height: " + heightInMeters + "m (" + (heightInMeters * 100) + "cm)";
     }
 
@@ -53,8 +66,18 @@ public class Main {
             byte age,
             float heightInMeters,
             float weightKg,
-            boolean isStudent
+            boolean isStudent,
+            boolean isAdult,
+            float bmi
     ) {
-        // Code
+        if (isStudent)
+            System.out.printf("%s (Student)\n", getFullName(firstName, lastName));
+        else
+            System.out.printf("%s\n", getFullName(firstName, lastName));
+        System.out.printf("Is adult: %s\n", isAdult);
+        System.out.printf("Age: %d\n", age);
+        System.out.printf("%s\n", getHeightString(heightInMeters));
+        System.out.printf("Weight: %.2f Kg\n", weightKg);
+        System.out.printf("BMI: %.1f\n", bmi);
     }
 }

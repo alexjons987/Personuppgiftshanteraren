@@ -57,17 +57,17 @@ main-metoden men använda andra metoder för specifika uppgifter.
 - Längd i meter (double)
 - Vikt i kg (double)
 - Student (boolean)
-## 2. Skapa följande metoder: ❌
+## 2. Skapa följande metoder: ✅
 - En metod som tar förnamn och efternamn som parametrar och returnerar fullständigt namn ✅
 - En metod som tar ålder som parameter och returnerar om personen är myndig (boolean) ✅
 - En metod som beräknar BMI (använd vikt och längd som parametrar) ✅
 - En metod som tar längd som parameter och returnerar längd i både meter och centimeter som en String ✅
-- En metod som skriver ut all information om personen snyggt formaterat ❌
-## 3. I main-metoden: ❌
+- En metod som skriver ut all information om personen snyggt formaterat ✅
+## 3. I main-metoden: ✅
 - Skapa alla variabler och ge dem värden ✅
-- Anropa dina metoder med dessa variabler ❌
-- Spara resultaten i nya variabler när metoderna returnerar värden ❌
-- Skriv ut resultaten ❌
+- Anropa dina metoder med dessa variabler ✅
+- Spara resultaten i nya variabler när metoderna returnerar värden ✅
+- Skriv ut resultaten ✅
 ---
 Saker att experimentera med:
 - Prova både metoder som returnerar värden och void-metoder
@@ -91,9 +91,9 @@ Tips för implementation:
 - Testa varje metod separat innan du kombinerar dem
 
 Utmaningar att lägga till när grunderna fungerar:
-- Lägg till parametervalidering i metoderna (t.ex. att ålder inte kan vara negativ)
-- Skapa en metod som tar emot flera parametrar av olika typer
-- Gör en metod som returnerar olika värden baserat på flera villkor
+- Lägg till parametervalidering i metoderna (t.ex. att ålder inte kan vara negativ) ✅
+- Skapa en metod som tar emot flera parametrar av olika typer ✅
+- Gör en metod som returnerar olika värden baserat på flera villkor (??)
 
 Denna övning hjälper dig förstå:
 - Modularisering av kod
