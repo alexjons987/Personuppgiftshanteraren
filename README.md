@@ -58,16 +58,16 @@ main-metoden men använda andra metoder för specifika uppgifter.
 - Vikt i kg (double)
 - Student (boolean)
 ## 2. Skapa följande metoder: ✅
-- En metod som tar förnamn och efternamn som parametrar och returnerar fullständigt namn ✅
-- En metod som tar ålder som parameter och returnerar om personen är myndig (boolean) ✅
-- En metod som beräknar BMI (använd vikt och längd som parametrar) ✅
-- En metod som tar längd som parameter och returnerar längd i både meter och centimeter som en String ✅
-- En metod som skriver ut all information om personen snyggt formaterat ✅
+- En metod som tar förnamn och efternamn som parametrar och returnerar fullständigt namn
+- En metod som tar ålder som parameter och returnerar om personen är myndig (boolean)
+- En metod som beräknar BMI (använd vikt och längd som parametrar)
+- En metod som tar längd som parameter och returnerar längd i både meter och centimeter som en String
+- En metod som skriver ut all information om personen snyggt formaterat
 ## 3. I main-metoden: ✅
-- Skapa alla variabler och ge dem värden ✅
-- Anropa dina metoder med dessa variabler ✅
-- Spara resultaten i nya variabler när metoderna returnerar värden ✅
-- Skriv ut resultaten ✅
+- Skapa alla variabler och ge dem värden
+- Anropa dina metoder med dessa variabler
+- Spara resultaten i nya variabler när metoderna returnerar värden
+- Skriv ut resultaten
 ---
 Saker att experimentera med:
 - Prova både metoder som returnerar värden och void-metoder
