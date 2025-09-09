@@ -1,3 +1,70 @@
 public class UppgiftC {
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        // Assignment does not call for the usage of a Person Class!
+
+        // String for first- and lastnames, the majority of names consists of more than a single character
+        String firstName = "Alexander";
+        String lastName = "J.";
+        // Byte as the oldest recorded person became 122 years and 164 days old, a few years off the byte range of 127
+        byte age = 25;
+        // Float as height is usually measured with a decimal precision of 2
+        float heightM = 1.85f;
+        // Float as weight is usually measured with a decimal precision of 2
+        float weightKg = 900.0f;
+        // Boolean as the person is either a student or not a student
+        boolean isStudent = true;
+
+    }
+
+    public static String getAgeStatusString(byte age) {
+        if (age < 13)
+            return "\"Child\" category!";
+        else if (age >= 13 && age <= 19)
+            return "\"Teen\" category!";
+        else if (age >= 20 && age <= 64)
+            return "\"Adult\" category!";
+
+        return "\"Senior\" category!";
+    }
+
+    public static String getFullName(String firstName, String lastName) {
+        return firstName + " " + lastName;
+    }
+
+    public static boolean isAdult(byte age) {
+        if (age < 0)
+            throw new RuntimeException();
+        return age >= 18;
+    }
+
+    public static float calculateBMI(float weightKg, float heightMeters) {
+        if (heightMeters == 0)
+            throw new RuntimeException();
+        return weightKg / (float) (Math.pow(heightMeters, 2));
+    }
+
+    public static String getHeightString(float heightInMeters) {
+        return "Height: " + heightInMeters + "m (" + (heightInMeters * 100) + "cm)";
+    }
+
+    public static void prettyPrintPerson(
+            String firstName,
+            String lastName,
+            byte age,
+            float heightInMeters,
+            float weightKg,
+            boolean isStudent,
+            boolean isAdult,
+            float bmi
+    ) {
+        if (isStudent)
+            System.out.printf("%s (Student)\n", getFullName(firstName, lastName));
+        else
+            System.out.printf("%s\n", getFullName(firstName, lastName));
+        System.out.printf("Is adult: %s\n", isAdult);
+        System.out.printf("Age: %d\n", age);
+        System.out.printf("%s\n", getHeightString(heightInMeters));
+        System.out.printf("Weight: %.2f Kg\n", weightKg);
+        System.out.printf("BMI: %.1f\n", bmi);
+    }
 }

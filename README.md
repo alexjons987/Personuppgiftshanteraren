@@ -112,7 +112,7 @@ Denna övning hjälper dig förstå:
 Bygger vidare på tidigare övning men lägger till logik för att hantera olika scenarios och kontrollflöden.
 #### 1. Behåll de grundläggande variablerna och metoderna från förra övningen ✅
 #### 2. Lägg till nya metoder som använder kontrollstrukturer: ❌
-* `kontrolleraPersonStatus`:
+* `kontrolleraPersonStatus`: ✅
   * Ta ålder som parameter
   * Använd if-else för olika ålderskategorier (barn, ungdom, vuxen, pensionär)
   * Returnera lämpligt statusmeddelande

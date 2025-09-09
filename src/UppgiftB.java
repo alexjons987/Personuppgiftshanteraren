@@ -14,26 +14,15 @@ public class UppgiftB {
         // Boolean as the person is either a student or not a student
         boolean isStudent = true;
 
-        System.out.printf(
-                "I am %s %s and I'm currently %d. I am roughly %.2fm %.1f Kg beast.\n",
-                firstName,
-                lastName,
-                age,
-                heightM,
-                weightKg
-        );
-        if (isStudent)
-            System.out.println("I am currently a Lexicon student.");
-        else
-            System.out.println("I am not a student.");
-
-        System.out.printf("In 5 years I will be %d years old\n", (age + 5));
-        System.out.println("My height in centimeter is " + heightM * 100);
-
         String fullName = getFullName(firstName, lastName);
         boolean isAdult = isAdult(age);
         float bmi = calculateBMI(weightKg, heightM);
         String heightString = getHeightString(heightM);
+
+        System.out.println(fullName);
+        System.out.println(isAdult);
+        System.out.println(bmi);
+        System.out.println(heightString);
 
         System.out.println(); // Newline for better demonstration in console output
 
