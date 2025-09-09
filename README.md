@@ -45,7 +45,7 @@ Tips:
 - Försök medvetet skapa några fel för att se vad som händer
 - Var inte rädd för att testa dig fram
 
-# B) Den Utökade Personuppgiftshanteraren ❌
+# B) Den Utökade Personuppgiftshanteraren ✅
 Här är en utvecklad version som introducerar metoder på ett naturligt sätt:
 
 I denna övning ska du skapa ett program som hanterar personuppgifter och använder
@@ -110,7 +110,7 @@ Denna övning hjälper dig förstå:
 
 # C) Den Interaktiva Personuppgiftshanteraren ❌
 Bygger vidare på tidigare övning men lägger till logik för att hantera olika scenarios och kontrollflöden.
-#### 1. Behåll de grundläggande variablerna och metoderna från förra övningen ❌
+#### 1. Behåll de grundläggande variablerna och metoderna från förra övningen ✅
 #### 2. Lägg till nya metoder som använder kontrollstrukturer: ❌
 * `kontrolleraPersonStatus`:
   * Ta ålder som parameter
