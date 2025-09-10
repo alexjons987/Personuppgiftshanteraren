@@ -1,8 +1,10 @@
 import java.time.Year;
+import java.util.Scanner;
 
+// Assignment does not call for the usage of a Person Class!
 public class UppgiftC {
     public static void main(String[] args) {
-        // Assignment does not call for the usage of a Person Class!
+        Scanner scanner = new Scanner(System.in);
 
         // String for first- and lastnames, the majority of names consists of more than a single character
         String firstName = "Alexander";
@@ -17,6 +19,39 @@ public class UppgiftC {
         // Boolean as the person is either a student or not a student
         boolean isStudent = true;
 
+        boolean flag = true;
+        while (flag) {
+            int search;
+            do {
+                System.out.println("\n1. Show basic info");
+                System.out.println("2. Show age stats");
+                System.out.println("3. Show BMI analysis");
+                System.out.println("4. Show name analysis");
+                System.out.println("0. Exit");
+                System.out.print(": ");
+            } while ((search = scanner.nextInt()) < 0 || search > 4);
+
+            switch (search) {
+                case 0:
+                    flag = false;
+                    break;
+                case 1:
+                    prettyPrintPerson(firstName, lastName, age, heightM, weightKg, isStudent);
+                    break;
+                case 2:
+                    System.out.printf("You are considered a(n) %s\n", getAgeStatusString(age));
+                    printAgeStats(age);
+                    break;
+                case 3:
+                    System.out.println(getBMICategory(calculateBMI(weightKg, heightM)));
+                    break;
+                case 4:
+                    String fullName = getFullName(firstName, lastName);
+                    System.out.printf("%s (Vowels: %d)\n", fullName, getVowelCount(fullName));
+                    printNameFormat(fullName);
+                    break;
+            }
+        }
     }
 
     public static String getFullName(String firstName, String lastName) {
@@ -71,7 +106,7 @@ public class UppgiftC {
     }
 
     public static void printNameFormat(String name) {
-        switch(name.split(" ").length) {
+        switch (name.split(" ").length) {
             case 1:
                 System.out.println("Only first or last name present!");
             case 2:
@@ -84,7 +119,18 @@ public class UppgiftC {
     }
 
     public static int getVowelCount(String name) {
+        int vowels = 0;
 
+        for (int i = 0; i < name.length(); i++)
+            if (isVowel(name.charAt(i)))
+                vowels++;
+
+        return vowels;
+    }
+
+    public static boolean isVowel(char c) {
+        c = String.valueOf(c).toLowerCase().charAt(0); // Make sure character is lower-case
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 
     public static String getHeightString(float heightInMeters) {
@@ -97,18 +143,16 @@ public class UppgiftC {
             int age,
             float heightInMeters,
             float weightKg,
-            boolean isStudent,
-            boolean isAdult,
-            float bmi
+            boolean isStudent
     ) {
         if (isStudent)
             System.out.printf("%s (Student)\n", getFullName(firstName, lastName));
         else
             System.out.printf("%s\n", getFullName(firstName, lastName));
-        System.out.printf("Is adult: %s\n", isAdult);
         System.out.printf("Age: %d\n", age);
+        System.out.printf("Is adult: %s\n", isAdult(age));
         System.out.printf("%s\n", getHeightString(heightInMeters));
         System.out.printf("Weight: %.2f Kg\n", weightKg);
-        System.out.printf("BMI: %.1f\n", bmi);
+        System.out.printf("BMI: %.1f\n", calculateBMI(weightKg, heightInMeters));
     }
 }
