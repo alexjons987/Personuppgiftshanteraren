@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class UppgiftC {
     public static void main(String[] args) {
         // Assignment does not call for the usage of a Person Class!
@@ -6,7 +8,8 @@ public class UppgiftC {
         String firstName = "Alexander";
         String lastName = "J.";
         // Byte as the oldest recorded person became 122 years and 164 days old, a few years off the byte range of 127
-        byte age = 25;
+        // But we are lazy so we use int
+        int age = 25;
         // Float as height is usually measured with a decimal precision of 2
         float heightM = 1.85f;
         // Float as weight is usually measured with a decimal precision of 2
@@ -16,31 +19,72 @@ public class UppgiftC {
 
     }
 
-    public static String getAgeStatusString(byte age) {
-        if (age < 13)
-            return "\"Child\" category!";
-        else if (age >= 13 && age <= 19)
-            return "\"Teen\" category!";
-        else if (age >= 20 && age <= 64)
-            return "\"Adult\" category!";
-
-        return "\"Senior\" category!";
-    }
-
     public static String getFullName(String firstName, String lastName) {
         return firstName + " " + lastName;
     }
 
-    public static boolean isAdult(byte age) {
+    public static boolean isAdult(int age) {
         if (age < 0)
             throw new RuntimeException();
         return age >= 18;
+    }
+
+    public static String getAgeStatusString(int age) {
+        if (age < 13)
+            return "\"Child\"";
+        else if (age >= 13 && age <= 19)
+            return "\"Teen\"";
+        else if (age >= 20 && age <= 64)
+            return "\"Adult\"";
+
+        return "\"Senior\"";
     }
 
     public static float calculateBMI(float weightKg, float heightMeters) {
         if (heightMeters == 0)
             throw new RuntimeException();
         return weightKg / (float) (Math.pow(heightMeters, 2));
+    }
+
+    public static String getBMICategory(float bmi) {
+        if (bmi < 18.5f)
+            return "Underweight";
+        else if (bmi >= 18.5f && bmi < 25.0f)
+            return "Healthy Weight";
+        else if (bmi >= 25.0f && bmi < 30.0f)
+            return "Overweight";
+        else if (bmi >= 30.0f && bmi < 35.0f)
+            return "Class 1 Obesity";
+        else if (bmi >= 35.0f && bmi < 40.0f)
+            return "Class 2 Obesity";
+        else // bmi >= 40.0f
+            return "Class 3 Obesity (Severe Obesity)";
+    }
+
+    public static void printAgeStats(int age) {
+        int year = Year.now().getValue();
+        System.out.println("Your age in the next 10 years:");
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf("%d: %d\n", year, age + i);
+            year++;
+        }
+    }
+
+    public static void printNameFormat(String name) {
+        switch(name.split(" ").length) {
+            case 1:
+                System.out.println("Only first or last name present!");
+            case 2:
+                System.out.println("First and last name present (or middlename??)!");
+            case 3:
+                System.out.println("First, middle and last name present!");
+            default:
+                System.out.println("A lot of names present!");
+        }
+    }
+
+    public static int getVowelCount(String name) {
+
     }
 
     public static String getHeightString(float heightInMeters) {
@@ -50,7 +94,7 @@ public class UppgiftC {
     public static void prettyPrintPerson(
             String firstName,
             String lastName,
-            byte age,
+            int age,
             float heightInMeters,
             float weightKg,
             boolean isStudent,

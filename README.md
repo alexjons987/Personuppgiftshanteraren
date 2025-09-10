@@ -116,21 +116,21 @@ Bygger vidare på tidigare övning men lägger till logik för att hantera olika
   * Ta ålder som parameter
   * Använd if-else för olika ålderskategorier (barn, ungdom, vuxen, pensionär)
   * Returnera lämpligt statusmeddelande
-* `beräknaBMIKategori`:
+* `beräknaBMIKategori`: ✅
   * Ta BMI som parameter
   * Använd if-else if-kedja för olika BMI-intervall
   * Returnera viktkategori som String
-* `skapaÅldersstatistik`:
+* `skapaÅldersstatistik`: ✅
   * Ta ålder som parameter
   * Använd for-loop för att visa året och åldern för de nästa 10 åren
   * Skriv ut prognosen
-* `kontrolleraNamnFormat`:
+* `kontrolleraNamnFormat`: ✅
   * Ta namn som parameter
   * Använd switch för att hantera olika format:
     * bara förnamn
     * för- och efternamn
     * för-, mellan- och efternamn
-* `räknaVokaler`:
+* `räknaVokaler`: ❌
   * Ta ett namn som parameter
   * Använd while-loop för att gå igenom varje bokstav
   * Räkna antal vokaler
